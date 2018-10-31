@@ -157,3 +157,62 @@ a img {
 	border: 0;
 }
 
+/************************************************/
+/**
+* 定义板块尺寸
+*/
+.container-fluid{
+	width: 100%;
+}
+.container{
+	width: 1180px;
+}
+
+/**
+* #topper
+* 顶部黑色线条样式
+*/
+#topper{
+	height: 30px;
+}
+#topper p{
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 30px;
+}
+#topper span{
+	padding: 0 10px;
+}
+#topper span:hover{
+	color: #007bff;
+}
+
+/**
+* #navi 头部导航
+* 
+*/
+#navi{
+	height: 71px;
+}
+#navi .nav-item{
+	height: 71PX;
+	padding: 5px 30px 0 30px;
+	text-align: center;
+}
+#navi .nav-item a{
+	font-size: 16px;
+}
+#navi .nav-item:hover{
+	background-color: #007bff;
+}
+#navi .nav-item:hover a{
+	color: #fff;
+	font-weight: 700;
+}
+#navi .nav-item .navi-en{
+	color: #6c757d;
+	font-size: 15px;
+}
+#navi .nav-item:hover .navi-en{
+	color: #fff;
+}
