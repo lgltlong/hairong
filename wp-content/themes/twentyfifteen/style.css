@@ -216,3 +216,58 @@ a img {
 #navi .nav-item:hover .navi-en{
 	color: #fff;
 }
+
+/**
+* footer style
+*/
+footer{
+	padding: 20px 0;
+	background-color: #007bff;
+}
+.ft-infos{
+	height: 280px;
+}
+.ft-logo p{
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+.ft-logo p img{
+	height: 30px;
+	width: auto;
+}
+
+.ft-weixin{
+	height: 200px;
+	width: 200px;
+	text-align: center;
+}
+.ft-weixin img{
+	width: 100%;
+}
+
+.ft-links ul{
+	text-align: center;
+}
+.ft-links ul li{
+	height: 30px;
+}
+.ft-links ul li:first-child{
+	font-size: 18px; 
+	padding: 0 0 45px 0;
+}
+.ft-links li, .ft-links li a{
+	font-size: 14px;
+	line-height: 40px;
+	color: #fff;
+}
+.ft-links li:hover a{
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+
+/* copyright */
+#copyright{
+	padding: 10px 0;
+}

@@ -504,3 +504,16 @@ function disable_embeds_flush_rewrite_rules() {
   flush_rewrite_rules();
 }
 register_deactivation_hook( __FILE__, 'disable_embeds_flush_rewrite_rules' );
+
+/**
+* 返回images文件夹下图片的链接
+* $name string 图片相对链接名字
+* $display bool 是否直接打印到页面，默认为true，false为不显示，只返回链接
+*/
+function imgUrl( $name = '', $display = true ){
+	if( !$display ){
+		return get_template_directory_uri().'/images/' . $name;
+	}
+
+	echo get_template_directory_uri().'/images/' . $name;
+}
