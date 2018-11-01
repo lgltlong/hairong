@@ -167,6 +167,10 @@ a img {
 .container{
 	width: 1180px;
 }
+#news,
+#abouts{
+	margin-top: 80px;
+}
 
 /**
 * #topper
@@ -216,6 +220,41 @@ a img {
 #navi .nav-item:hover .navi-en{
 	color: #fff;
 }
+
+/**
+* 首页主题样式
+*/
+.cont-head{
+	width: 300px;
+}
+.cont-head h1{
+	font-size: 56px;
+	line-height: 72px;
+	font-family: Arial, 微软雅黑;
+}
+.cont-head h2{
+	font-size: 28px;
+	line-height: 56px;
+	font-family: Arial, 微软雅黑;
+}
+.cont-body{
+	width: 820px;
+}
+
+/**
+* 首页板块1，关于我们不分
+*/
+#abouts .card{
+	width: 260px;
+}
+#abouts .card-img-top{
+	width: inherit;
+	height: 172px;
+}
+#abouts .card-text{
+	line-height: 2em;
+}
+
 
 /**
 * footer style
