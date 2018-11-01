@@ -171,6 +171,7 @@ a img {
 #abouts,
 #videos,
 #products,
+#partner,
 footer{
 	margin-top: 80px;
 }
@@ -359,6 +360,18 @@ ul.news-list li:hover h3{
 	font-size: 14px;
 	line-height: 30px;
 }
+
+/**
+* partner
+*/
+#partner .cont-body img{
+	width: 150px;
+	height: 150px;
+}
+#partner .cont-body img:hover{
+	box-shadow: 0 0 20px #eee;
+}
+
 
 /**
 * footer style

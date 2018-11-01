@@ -207,4 +207,23 @@ get_header(); ?>
 	</div>
 </div>
 
+<!-- friend links -->
+<div id="partner" class="container d-flex justify-content-between">
+	<!-- 板块标题 -->
+	<div class="cont-head">
+		<h1 class="text-primary">PARTNER</h1>
+		<h2 class="text-secondary">合作伙伴</h2>
+	</div>
+
+	<div class="cont-body">
+		<div class="d-flex justify-content-between">
+			<img class="d-block" src="<?php imgUrl('partner_dx.png');?>" alt="中国电信">
+			<img class="d-block" src="<?php imgUrl('partner_lt.png');?>" alt="中国联通">
+			<img class="d-block" src="<?php imgUrl('partner_yd.png');?>" alt="中国移动">
+			<img class="d-block" src="<?php imgUrl('partner_tt.png');?>" alt="中国铁塔">
+			<img class="d-block" src="<?php imgUrl('partner_tx.png');?>" alt="中国通信服务">
+		</div>
+	</div>
+</div>
+
 <?php get_footer(); ?>
