@@ -242,7 +242,7 @@ a img {
 }
 
 /**
-* 首页板块1，关于我们不分
+* 首页板块1，关于我们部分
 */
 #abouts .card{
 	width: 260px;
@@ -255,6 +255,62 @@ a img {
 	line-height: 2em;
 }
 
+/**
+* 新闻资讯板块
+*/
+.notnow{
+	/* 非当前元素不显示 */
+	display: none;
+}
+.news-album{
+	width: 480px;
+	height: 300px;
+
+	overflow: hidden;
+}
+.news-album img{
+	width: 100%;
+	height: 100%;
+}
+.news-list{
+	width: 320px;
+}
+.news-item{
+	height: 40px;
+	width: 100%;
+}
+ul.news-list li h3{
+	font-size: 14px;
+	line-height: 2em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+ul.news-list li:hover h3{
+	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.news-item-1 p,
+.news-item-2 p,
+.news-item-3 p,
+.news-item-4 p,
+.news-item-5 p{
+	font-size: 14px;
+	display: none;
+}
+.news-active{
+	height: 90px;
+	border-bottom: 1px dashed #007bff;
+}
+.news-active h3{
+	font-size: 18px;
+	font-weight: 700;
+}
+.news-active p{
+	display: block;
+}
 
 /**
 * footer style

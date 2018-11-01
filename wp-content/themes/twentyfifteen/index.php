@@ -64,6 +64,49 @@ get_header(); ?>
 		<h1 class="text-primary">NEWS</h1>
 		<h2 class="text-secondary">新闻资讯</h2>
 	</div>
+
+	<div class="cont-body d-flex justify-content-between">
+		<div  class="news-album border-primary">
+			<img id="news-album" src="<?php echo get_the_post_thumbnail_url();?>" alt='<?php the_title();?>'>
+		</div>
+
+		<ul class="news-list">
+		<?php
+			$argv = array(
+				'cat' => '2',
+				'posts_per_page' => 5
+			);
+			query_posts( $argv );
+
+			$count = 1;
+			if( have_posts() ) : while( have_posts() ) : the_post();
+		?>
+			<li class="news-item-<?php echo $count;?> p-1 <?php if( $count==1 ){
+				echo 'news-active';
+			}?>" onmouseover="showme(<?php echo $count;?>, '<?php echo get_the_post_thumbnail_url();?>')">
+				<h3 class="text-primary"><?php the_title();?></h3>
+				<p class="text-secondary"><?php echo get_the_date( the_ID() );?></p>
+			</li>	
+		<?php
+			$count++;
+			//end loop
+			endwhile;
+		endif;
+		?>
+		</ul>
+		<script type="text/javascript">
+			function showme( cur, url ){
+				for( n=1; n<6; n++ ){
+					if( n==cur ){
+						$('.news-item-'+n).addClass('news-active');
+						$('#news-album').attr('src', url);
+					}else{
+						$('.news-item-'+n).removeClass('news-active');
+					}
+				}
+			}
+		</script>
+	</div>
 </div>
 
 <?php get_footer(); ?>
