@@ -90,7 +90,7 @@ html {
 }
 
 body {
-	background: #f1f1f1;
+	background: #efefef;
 }
 
 article,
@@ -170,7 +170,8 @@ a img {
 #news,
 #abouts,
 #videos,
-#products{
+#products,
+footer{
 	margin-top: 80px;
 }
 
@@ -324,8 +325,39 @@ ul.news-list li:hover h3{
 /**
 * products
 */
-#products{
-
+#products .cont-item{
+	height: 180px;
+	width: 100%;
+	padding-top: 20px;
+}
+#products .cont-item-icon{
+	width: 40px;
+	vertical-align: middle;
+	margin-left: 50px;
+}
+#products .cont-item-icon img{
+	width: 40px; 
+	height: 40px;
+}
+#products .cont-item-infos{
+	width: 280px;
+	padding: 0 20px 0 20px;
+}
+#products .cont-item-infos p{
+	line-height: 1.8em;
+}
+#products .cont-item-arti{
+	width: 420px;
+}
+#products .cont-item-arti div{
+	text-align: center;
+}
+#products .cont-item-arti img{
+	width: 200px;
+}
+#products .cont-item-arti div p{
+	font-size: 14px;
+	line-height: 30px;
 }
 
 /**

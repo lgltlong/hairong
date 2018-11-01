@@ -125,15 +125,85 @@ get_header(); ?>
 </div>
 
 <!-- products -->
-<div id="products" class="container">
+<div id="products" class="container d-flex justify-content-between">
 	<!-- 板块标题 -->
 	<div class="cont-head">
-		<h1 class="text-primary">NEWS</h1>
-		<h2 class="text-secondary">新闻资讯</h2>
+		<h1 class="text-primary">PRODUCT</h1>
+		<h2 class="text-secondary">产品中心</h2>
 	</div>
 
 	<div class="cont-body">
-		
+		<!-- one line -->
+		<div class="cont-item d-flex justify-content-between mb-2 border-bottom">
+			<div class="cont-item-icon">
+				<img src="<?php imgUrl('icon/ico1_8.png');?>" alt="安徽海荣通讯">			
+			</div>
+
+			<div class="cont-item-infos">
+				<h1 class="text-primary">5G基站</h1>
+				<p class="text-secondary">5G基站基于多天线Massive MIMO（大规模输入输出）、新型编码LDPC/Polar等5G先进新技术，具备超大带宽，体验速率可达1Gbps，相当于4G的100倍，峰值速率更是可达20Gbps，相当于4G的200倍。</p>
+			</div>
+
+			<div class="cont-item-arti d-flex justify-content-between">
+				<div>
+					<img src="<?php imgUrl('img-6.jpg');?>" alt="5G基站">
+					<p class="text-secondary">5G 核心网</p>
+				</div>
+
+				<div>
+					<img src="<?php imgUrl('img-1.jpg');?>" alt="5G基站">
+					<p class="text-secondary">通讯能源</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- one line -->
+		<div class="cont-item d-flex justify-content-between mb-2 border-bottom">
+			<div class="cont-item-icon">
+				<img src="<?php imgUrl('icon/ico1_9.png');?>" alt="安徽海荣通讯">			
+			</div>
+
+			<div class="cont-item-infos">
+				<h1 class="text-primary">铁塔建设</h1>
+				<p class="text-secondary">可生产包括接插式单管塔、法兰式单管塔、景观塔、仿生树、美化灯杆、三管塔、角钢塔、增高架、小微站、通信拖车等多种产品。</p>
+			</div>
+
+			<div class="cont-item-arti d-flex justify-content-between">
+				<div>
+					<img src="<?php imgUrl('img-5.jpg');?>" alt="5G基站">
+					<p class="text-secondary">非单管塔</p>
+				</div>
+
+				<div>
+					<img src="<?php imgUrl('img-4.jpg');?>" alt="5G基站">
+					<p class="text-secondary">单管塔</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- one line -->
+		<div class="cont-item d-flex justify-content-between mb-2 border-bottom">
+			<div class="cont-item-icon">
+				<img src="<?php imgUrl('icon/ico1_10.png');?>" alt="安徽海荣通讯">			
+			</div>
+
+			<div class="cont-item-infos">
+				<h1 class="text-primary">多元产品</h1>
+				<p class="text-secondary">多元化经营企业为管理者创造了一个协调管理不同经营业务的机会，因此，其运行将比专业化经营企业更有效率，能获取更高的投资报酬</p>
+			</div>
+
+			<div class="cont-item-arti d-flex justify-content-between">
+				<div>
+					<img src="<?php imgUrl('img-2.jpg');?>" alt="5G基站">
+					<p class="text-secondary">基站</p>
+				</div>
+
+				<div>
+					<img src="<?php imgUrl('img-3.jpg');?>" alt="5G基站">
+					<p class="text-secondary">数据通讯</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
