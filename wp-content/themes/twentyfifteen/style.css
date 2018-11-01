@@ -168,7 +168,9 @@ a img {
 	width: 1180px;
 }
 #news,
-#abouts{
+#abouts,
+#videos,
+#products{
 	margin-top: 80px;
 }
 
@@ -310,6 +312,20 @@ ul.news-list li:hover h3{
 }
 .news-active p{
 	display: block;
+}
+
+/**
+* videos style
+*/
+#videos{
+	padding: 20px 0;
+}
+
+/**
+* products
+*/
+#products{
+
 }
 
 /**

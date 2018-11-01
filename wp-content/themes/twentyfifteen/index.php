@@ -109,4 +109,32 @@ get_header(); ?>
 	</div>
 </div>
 
+<!-- 视频宣传板块 -->
+<div id="videos" class="container-fluid bg-primary">
+	<div class="container p-0 d-flex justify-content-between">
+		<video autoplay="autoplay" controls="controls" width="720" height="408">
+			<source src="<?php imgUrl('5g.Ogg');?>" type="video/ogg">
+		</video>
+
+		<!-- 板块标题 -->
+		<div class="cont-head">
+			<h1 class="text-white">VIDEO</h1>
+			<h2 class="text-white">5G未来</h2>
+		</div>
+	</div>
+</div>
+
+<!-- products -->
+<div id="products" class="container">
+	<!-- 板块标题 -->
+	<div class="cont-head">
+		<h1 class="text-primary">NEWS</h1>
+		<h2 class="text-secondary">新闻资讯</h2>
+	</div>
+
+	<div class="cont-body">
+		
+	</div>
+</div>
+
 <?php get_footer(); ?>
