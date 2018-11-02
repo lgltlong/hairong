@@ -172,6 +172,7 @@ a img {
 #videos,
 #products,
 #partner,
+#p404,
 footer{
 	margin-top: 80px;
 }
@@ -240,6 +241,9 @@ footer{
 	font-size: 28px;
 	line-height: 56px;
 	font-family: Arial, 微软雅黑;
+}
+.cont-lg-head{
+	/* 宽度100%头部 */
 }
 .cont-body{
 	width: 820px;
@@ -372,7 +376,6 @@ ul.news-list li:hover h3{
 	box-shadow: 0 0 20px #eee;
 }
 
-
 /**
 * footer style
 */
@@ -426,4 +429,10 @@ footer{
 /* copyright */
 #copyright{
 	padding: 10px 0;
+}
+
+/* ************* 404 ************* */
+#p404 .cont-lg-head img{
+	width: 400px;
+	height: 400px;
 }
