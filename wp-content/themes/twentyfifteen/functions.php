@@ -517,3 +517,37 @@ function imgUrl( $name = '', $display = true ){
 
 	echo get_template_directory_uri().'/images/' . $name;
 }
+
+/**
+* paginate_links
+*/
+function show_paginate($a_Format = '/page/%#%'){
+	global $wp_query;
+	$pages = paginate_links(
+		array(
+			// https://www.boke8.net/wordpress-paginate_links.html
+			// 对于format，若固定链接是“/%post_id%.html”则为“/page/%#%”，否则“?paged=%#%”
+			'format' => $a_Format,
+			'show_all' => false,
+			'prev_next' => true,
+			'prev_text' => '上一页',
+			'next_text' => '下一页',
+			'type' => 'plain',
+			'before_page_number' => '第',
+			'after_page_number' => '页',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages,
+		)
+	);
+
+	echo $pages;
+}
+
+//【去除window._wpemojiSettings】
+remove_action( 'admin_print_scripts',    'print_emoji_detection_script');
+remove_action( 'admin_print_styles',    'print_emoji_styles');
+remove_action( 'wp_head',        'print_emoji_detection_script',    7);
+remove_action( 'wp_print_styles',    'print_emoji_styles');
+remove_filter( 'the_content_feed',    'wp_staticize_emoji');
+remove_filter( 'comment_text_rss',    'wp_staticize_emoji');
+remove_filter( 'wp_mail',        'wp_staticize_emoji_for_email');

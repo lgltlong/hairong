@@ -6,10 +6,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-
-// 准备数据
-$category = current( get_the_category() );
-var_dump( $category );
+global $category;
 ?>
 
 <!-- sidebar-head -->

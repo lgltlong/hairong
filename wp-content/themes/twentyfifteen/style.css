@@ -486,6 +486,56 @@ footer{
 	font-size: 20px;
 }
 /**************** category ***************/
-#category{
+#category .breadcrumb{
+	height: 80px;
+	width: 100%;
+	text-align: right;
+}
+#category .breadcrumb a{
+	font-size: 16px;
+	line-height: 80px;
+	text-decoration: none;
+	padding: 0 10px;
+	letter-spacing: 1px;
+	text-align: right;
+}
+#category .bc-home::before{
+	content: url('./images/icon/home.png');
+}
+#category .cont-item-thumbnail{
+	width: 320px;
+	height: 180px;
+}
+#category .cont-item-thumbnail img{
+	width: 100%;
+	height: 100%;
+}
+#category .cont-item-infos{
+	width: 460px;
+	padding: 0 10px;
+}
+#category .cont-item-infos h1{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
+	font-size: 20px;
+	line-height: 1.8em;
+}
+#category .cont-item-infos p{
+	font-size: 14px;
+	line-height: 1.8em;
+}
+#category .cont-item:hover{
+	background-color: #f8f9fa;
+}
+#category .cont-item:hover a{
+	text-decoration: none;
+}
+#category .cat-page-list{
+	text-align: center;
+}
+#category .cat-page-list a,#category .cat-page-list span{
+	font-size: 2rem;
+	padding: 5px 10px;
 }
