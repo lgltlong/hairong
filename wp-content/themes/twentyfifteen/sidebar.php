@@ -7,41 +7,38 @@
  * @since Twenty Fifteen 1.0
  */
 
-if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
-	<div id="secondary" class="secondary">
+// 准备数据
+$category = current( get_the_category() );
+var_dump( $category );
+?>
 
-		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<?php
-					// Primary navigation menu.
-					wp_nav_menu( array(
-						'menu_class'     => 'nav-menu',
-						'theme_location' => 'primary',
-					) );
-				?>
-			</nav><!-- .main-navigation -->
-		<?php endif; ?>
+<!-- sidebar-head -->
+<div class="sidebar">
+	<!-- 侧边栏头部 -->
+	<div class="sidebar-head">
+		<div class="sidebar-title bg-primary text-right p-4">
+			<h1 class="text-white"><?php echo $category->name;?></h1>
+		</div>
 
-		<?php if ( has_nav_menu( 'social' ) ) : ?>
-			<nav id="social-navigation" class="social-navigation" role="navigation">
-				<?php
-					// Social links navigation menu.
-					wp_nav_menu( array(
-						'theme_location' => 'social',
-						'depth'          => 1,
-						'link_before'    => '<span class="screen-reader-text">',
-						'link_after'     => '</span>',
-					) );
-				?>
-			</nav><!-- .social-navigation -->
-		<?php endif; ?>
+		<div class="sidebar-description bg-light pl-4">
+			<p class="text-dark"><?php echo $category->description;?></p>
+		</div>
 
-		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-			<div id="widget-area" class="widget-area" role="complementary">
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
-			</div><!-- .widget-area -->
-		<?php endif; ?>
+		<div class="sidebar-icon rounded-circle bg-white ml-2 text-center align-middle">
+			<img src="<?php imgUrl('icon/ico1_8.png');?>" alt="<?php echo $category->name;?>">
+		</div>
+	</div>
 
-	</div><!-- .secondary -->
+	<!-- 侧边栏文章分类 -->
+	<div class="sidebar-cats mt-4">
+		<a class="d-block" href="<?php echo site_url().'/category/abouts';?>">公司动态</a>
+		<a class="d-block" href="<?php echo site_url().'/category/products';?>">产品中心</a>
+		<a class="d-block" href="<?php echo site_url().'/category/news';?>">新闻资讯</a>
+	</div>
 
-<?php endif; ?>
+	<!-- 侧边栏标签板块 -->
+	<div class="sidebar-tags">
+		
+	</div>
+	
+</div>
