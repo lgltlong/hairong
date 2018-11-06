@@ -23,19 +23,21 @@ get_header(); ?>
 			?>
 		</div>
 
-		<div class="cont-title p-4 border-bottom">
+		<div class="cont-title p-4">
 			<h1 class="text-primary"><?php the_title();?></h1>
 			<p class="text-secondary"><?php the_date( get_the_ID() );?></p>
 		</div>
 
-		<div class="cont-main mt-4">
+		<div class="cont-main mt-4 p-4">
+			<img class="w-100" src="<?php echo get_the_post_thumbnail_url();?>">
+
 			<?php
 				// the_content();
 				echo get_post( get_the_ID() )->post_content;
 			?>
 		</div>
 
-		<div class="sin-more pt-4 border-top">
+		<div class="sin-more p-4 mt-4 border-top">
 			<p><?php previous_post_link( '上一篇: %link' );?></p>
 			<p><?php next_post_link( '下一篇: %link' );?></p>
 		</div>

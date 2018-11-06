@@ -10,7 +10,7 @@ global $category;
 ?>
 
 <!-- sidebar-head -->
-<div class="sidebar">
+<div id="sidebar" class="sidebar">
 	<!-- 侧边栏头部 -->
 	<div class="sidebar-head">
 		<div class="sidebar-title bg-primary text-right p-4">

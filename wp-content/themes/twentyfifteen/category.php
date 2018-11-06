@@ -45,7 +45,7 @@ $category = current( get_the_category() );
 				if( have_posts() ): while( have_posts() ): the_post();
 			?>
 
-			<div class="cont-item mt-4 p-4 d-flex justify-content-between border-bottom">
+			<div class="cont-item p-4 d-flex justify-content-between border-bottom">
 				<div class="cont-item-thumbnail">
 					<img src="<?php echo  get_the_post_thumbnail_url();?>" alt="<?php the_title();?>">
 				</div>

@@ -580,9 +580,13 @@ footer{
 	font-size: 28px;
 	line-height: 2em;
 }
-#single .cont-main p{
-	font-size: 14px;
+#single .cont-main p, #single .cont-main{
+	font-size: 16px;
 	line-height: 2em;
+}
+#single .cont-main p:first-letter{
+	font-size: 1.3em;
+	font-weight: 700;
 }
 
 #single .cont-main img{
@@ -652,7 +656,7 @@ footer{
 		width: 100%;
 	}
 	.cont-body{
-		width: auto;
+		width: 100%;
 	}
 
 	#videos {
@@ -731,4 +735,46 @@ footer{
 	#slogan h1{
 		font-size: 2.5em;
 	}	
+
+	/************** sidebar *************/
+	#sidebar{
+		display: none!important;
+	}
+
+	/**************** single *************/
+	#single,
+	#category{
+		margin-top: 0;
+	}
+	.breadcrumb p,.breadcrumb a{
+		font-size: 1.2em;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#single .cont-title h1{
+		font-weight: bold;
+		font-size: 2em;
+	}
+	#single .sin-more p, #single .sin-more a{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	/********** category ************/
+	#category .cont-item-thumbnail{
+		display: none!important;
+	}
+	#category .cont-item-infos{
+		padding: 0;
+		width: 100%; 
+	}
+
+	#category .cont-item-infos a,
+	#category .cont-item-infos h1{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
 }
