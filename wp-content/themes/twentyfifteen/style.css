@@ -386,7 +386,8 @@ ul.news-list li:hover h3{
 #products .cont-item-arti img{
 	width: 200px;
 }
-#products .cont-item-arti div p{
+#products .cont-item-arti div a{
+	display: block;
 	font-size: 14px;
 	line-height: 30px;
 }
@@ -575,6 +576,7 @@ footer{
 /*************** single ****************/
 #single .cont-title{
 	text-align: center;
+	letter-spacing: 2px;
 }
 #single .cont-title h1{
 	font-size: 28px;

@@ -149,12 +149,12 @@ get_header(); ?>
 			<div class="cont-item-arti d-flex justify-content-between">
 				<div>
 					<img src="<?php imgUrl('img-6.jpg');?>" alt="5G基站">
-					<p class="text-secondary">5G 核心网</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/5g核心网.html'?>">5G 核心网</a>
 				</div>
 
 				<div>
 					<img src="<?php imgUrl('img-1.jpg');?>" alt="5G基站">
-					<p class="text-secondary">通讯能源</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/通信能源.html'?>">通讯能源</a>
 				</div>
 			</div>
 		</div>
@@ -173,12 +173,12 @@ get_header(); ?>
 			<div class="cont-item-arti d-flex justify-content-between">
 				<div>
 					<img src="<?php imgUrl('img-5.jpg');?>" alt="5G基站">
-					<p class="text-secondary">非单管塔</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/景观塔.html'?>">非单管塔</a>
 				</div>
 
 				<div>
 					<img src="<?php imgUrl('img-4.jpg');?>" alt="5G基站">
-					<p class="text-secondary">单管塔</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/products/普通地面塔.html'?>">单管塔</a>
 				</div>
 			</div>
 		</div>
@@ -197,12 +197,12 @@ get_header(); ?>
 			<div class="cont-item-arti d-flex justify-content-between">
 				<div>
 					<img src="<?php imgUrl('img-2.jpg');?>" alt="5G基站">
-					<p class="text-secondary">基站</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/基站.html'?>">基站</a>
 				</div>
 
 				<div>
 					<img src="<?php imgUrl('img-3.jpg');?>" alt="5G基站">
-					<p class="text-secondary">数据通讯</p>
+					<a class="text-secondary" href="<?php echo site_url().'/products/products/数据通信.html'?>">数据通讯</a>
 				</div>
 			</div>
 		</div>

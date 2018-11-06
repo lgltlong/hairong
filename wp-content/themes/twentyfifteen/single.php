@@ -24,7 +24,7 @@ get_header(); ?>
 		</div>
 
 		<div class="cont-title p-4">
-			<h1 class="text-primary"><?php the_title();?></h1>
+			<h1 class="text-primary font-weight-bold"><?php the_title();?></h1>
 			<p class="text-secondary"><?php the_date( get_the_ID() );?></p>
 		</div>
 
