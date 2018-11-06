@@ -68,7 +68,7 @@
 <div id="copyright" class="container-fluid bg-dark">
 	<div class="container d-flex justify-content-between">
 		<p class="text-white m-0">Copyright ©2018 安徽海荣通讯工程有限公司. | 宁ICP备18001253号-1</p>		
-		<p class="text-white m-0">技术支持：亳州高航企业服务有限公司</p>
+		<p class="cop-dev text-white m-0">技术支持：亳州高航企业服务有限公司</p>
 	</div>
 </div>
 

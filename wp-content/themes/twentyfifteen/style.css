@@ -156,6 +156,10 @@ a:active {
 a img {
 	border: 0;
 }
+p{
+	font-size: 14px;
+	line-height: 1.8em;
+}
 
 /************************************************/
 /**
@@ -166,6 +170,7 @@ a img {
 }
 .container{
 	width: 1180px;
+	margin: 0 auto;
 }
 #news,
 #abouts,
@@ -174,8 +179,10 @@ a img {
 #partner,
 #p404,
 #category,
+#single,
+#m-products,
 footer{
-	margin-top: 80px;
+	margin: 80px auto 0 auto;
 }
 
 /**
@@ -249,12 +256,22 @@ footer{
 .cont-body{
 	width: 820px;
 }
+.m-cont-body{
+	display: none!important;
+}
 
 /**
 * 首页板块1，关于我们部分
 */
 #abouts .card{
 	width: 260px;
+	border: 0;
+}
+#abouts .card img{
+	width: 100%;
+}
+#abouts .card-body{
+	padding-left: 0;
 }
 #abouts .card-img-top{
 	width: inherit;
@@ -327,10 +344,17 @@ ul.news-list li:hover h3{
 #videos{
 	padding: 20px 0;
 }
+#videos video{
+	height: 408px;
+	width: 720px;
+}
 
 /**
 * products
 */
+#m-products{
+	display: none;
+}
 #products .cont-item{
 	height: 180px;
 	width: 100%;
@@ -350,6 +374,7 @@ ul.news-list li:hover h3{
 	padding: 0 20px 0 20px;
 }
 #products .cont-item-infos p{
+	font-size: 12px;
 	line-height: 1.8em;
 }
 #products .cont-item-arti{
@@ -485,13 +510,16 @@ footer{
 	font-weight: 700;
 	font-size: 20px;
 }
-/**************** category ***************/
-#category .breadcrumb{
+/**************** breadcrumb ***************/
+.breadcrumb{
 	height: 80px;
 	width: 100%;
 	text-align: right;
 }
-#category .breadcrumb a{
+.bc-home::before{
+	content: url('./images/icon/home.png');
+}
+.breadcrumb a{
 	font-size: 16px;
 	line-height: 80px;
 	text-decoration: none;
@@ -499,9 +527,13 @@ footer{
 	letter-spacing: 1px;
 	text-align: right;
 }
-#category .bc-home::before{
-	content: url('./images/icon/home.png');
+.breadcrumb p{
+	letter-spacing: 1px;
+	font-size: 16px;
+	line-height: 2em;
 }
+
+/**************** category ***************/
 #category .cont-item-thumbnail{
 	width: 320px;
 	height: 180px;
@@ -538,4 +570,165 @@ footer{
 #category .cat-page-list a,#category .cat-page-list span{
 	font-size: 2rem;
 	padding: 5px 10px;
+}
+
+/*************** single ****************/
+#single .cont-title{
+	text-align: center;
+}
+#single .cont-title h1{
+	font-size: 28px;
+	line-height: 2em;
+}
+#single .cont-main p{
+	font-size: 14px;
+	line-height: 2em;
+}
+
+#single .cont-main img{
+	width: 500px;
+	height: auto;
+
+	display: block;
+	margin: 20px auto;
+}
+#single .sin-more p{
+	font-size: 14px;
+}
+
+/****************关于我们****************/
+#introduce, 
+#slogan,
+#development{
+	margin-top: 30px;
+}
+#introduce p, #development p ,
+#introduce h1, #development h1,
+#slogan h1
+{
+	line-height: 2em;
+}
+#development p{
+	font-size: 1.8em;
+}
+#introduce p:first-letter{
+	font-size: 1.2em;
+	font-weight: 700;
+	color: #007bff;
+}
+
+#slogan h1{
+	font-size: 4em;
+	letter-spacing: 5px;
+}
+
+/**********************************
+* 手机样式
+*/
+@media only screen and (max-width: 720px){
+	#navi nav{
+		z-index: 100;
+	}
+	#banner, 
+	#banner .carousel-inner,
+	#banner .carousel-inner .carousel-item{
+		height: 200px;
+		text-align: center;
+		overflow-x: hidden;
+	}
+	#banner img{
+		height: 100%;
+	}
+
+	#abouts,
+	#news,
+	#products,
+	#videos,
+	#partner{
+		margin-top: 30px;
+	}
+
+	.cont-head{
+		width: 100%;
+	}
+	.cont-body{
+		width: auto;
+	}
+
+	#videos {
+		padding:0;
+	}
+	#videos .cont-head{
+		display: none;
+	}
+	#videos video{
+		width: 100%;
+		height: auto;
+	}
+
+	/**
+	* abouts
+	*/
+	.cont-head h1{
+		font-size: 28px;
+		line-height: 1.2em;
+		font-weight: 700;
+	}
+	.cont-head h2{
+		font-size: 18px;
+		line-height: 1.2em;
+	}
+
+	#abouts,#abouts .cont-body,
+	#news,#news .cont-body
+	{
+		margin-left: 0px;
+	}
+	#abouts .card{
+		width: 100%;
+		margin-top: 20px;
+		padding: 0;
+	}
+	.row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/************ products ************/
+	#products{
+		display: none;
+	}
+	#m-products{
+		display: block;
+	}
+
+	#m-products .cont-body-item img{
+		height: 100%;
+	}
+
+	/************ partner *************/
+	#partner{
+		display: none;
+	}
+	.m-cont-body{
+		display: block!important;
+	}
+
+	/*************footer*************/
+	footer .ft-links, footer .ft-weixin{
+		display: none!important;
+	}
+
+	/**************copyright************/
+	#copyright .cop-dev{
+		display: none;
+	}
+
+	#development p{
+		font-size: 1.5em;
+	}
+
+	#slogan h1{
+		font-size: 2.5em;
+	}	
 }

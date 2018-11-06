@@ -12,7 +12,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="keywords" content="">
 	<meta name="description" content="<?php echo get_bloginfo('description', 'display').'|'.get_bloginfo('name');?>">
 
@@ -40,54 +40,60 @@
 	<div class="container d-flex justify-content-between">
 		<p class="text-white">欢迎登陆安徽海荣通讯科技有限公司</p>
 		<p class="text-white">
-			<span>登陆</span>
-			<span>注册</span>
-			<span>微信在线</span>
+			<span>服务热线电话：131-5678-1317</span>
 		</p>
 	</div>
 </div>
 
 <!-- navigation -->
-<nav id="navi" class="container d-flex justify-content-between">
+<div id="navi" class="container d-flex justify-content-between p-0">
 	<img class="navi-logo" src="<?php echo get_template_directory_uri().'/images/logo.png';?>" alt="<?php echo get_bloginfo('name');?>">
 
-	<ul class="nav">
-		<li class="nav-item border-left border-right">
-			<a class="nav-link active" href="<?php echo site_url();?>">
-				<span>首页</span><br>
-				<span class="navi-en">INDEX</span>
-			</a>
-		</li>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navi-collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-		<li class="nav-item border-right">
-			<a class="nav-link active" href="#">
-				<span>产品中心</span><br>
-				<span class="navi-en">PRODUCTS</span>
-			</a>
-		</li>
+		<div class="collapse navbar-collapse" id="navi-collapse">
+			<ul class="navbar-nav mr-auto bg-white">
+				<li class="nav-item border-left border-right">
+					<a class="nav-link active" href="<?php echo site_url();?>">
+						<span>首页</span><br>
+						<span class="navi-en">INDEX</span>
+					</a>
+				</li>
 
-		<li class="nav-item border-right">
-			<a class="nav-link active" href="#">
-				<span>新闻资讯</span><br>
-				<span class="navi-en">NEWS</span>
-			</a>
-		</li>
+				<li class="nav-item border-right">
+					<a class="nav-link active" href="<?php echo site_url().'/category/products';?>">
+						<span>产品中心</span><br>
+						<span class="navi-en">PRODUCTS</span>
+					</a>
+				</li>
 
-		<li class="nav-item border-right">
-			<a class="nav-link active" href="#">
-				<span>关于海荣</span><br>
-				<span class="navi-en">ABOUT</span>
-			</a>
-		</li>
+				<li class="nav-item border-right">
+					<a class="nav-link active" href="<?php echo site_url().'/category/news';?>">
+						<span>新闻资讯</span><br>
+						<span class="navi-en">NEWS</span>
+					</a>
+				</li>
 
-		<li class="nav-item border-right">
-			<a class="nav-link active" href="#">
-				<span>联系海荣</span><br>
-				<span class="navi-en">CONTACT</span>
-			</a>
-		</li>
-	</ul>
-</nav>
+				<li class="nav-item border-right">
+					<a class="nav-link active" href="<?php echo site_url().'/企业文化'?>">
+						<span>关于海荣</span><br>
+						<span class="navi-en">ABOUT</span>
+					</a>
+				</li>
+
+				<li class="nav-item border-right">
+					<a class="nav-link active" href="#">
+						<span>联系海荣</span><br>
+						<span class="navi-en">CONTACT</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
 
 <!-- banner -->
 <div id="banner" class="container-fluid p-0 carousel slide" data-ride="carousel">

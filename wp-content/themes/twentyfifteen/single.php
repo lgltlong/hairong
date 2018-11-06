@@ -9,40 +9,37 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!-- single -->
+<div id="single" class="container p-0 d-flex justify-content-between">
+	<?php get_sidebar(); ?>
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+	<!-- 文章主体 -->
+	<div class="cont-body">
+		<div class="breadcrumb p-0 m-0 pl-4 bg-white">
+			<?php
+				if( function_exists( 'single_breadcrumb' ) ){
+					echo single_breadcrumb( get_the_ID() );
+				}
+			?>
+		</div>
 
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
+		<div class="cont-title p-4 border-bottom">
+			<h1 class="text-primary"><?php the_title();?></h1>
+			<p class="text-secondary"><?php the_date( get_the_ID() );?></p>
+		</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<div class="cont-main mt-4">
+			<?php
+				// the_content();
+				echo get_post( get_the_ID() )->post_content;
+			?>
+		</div>
 
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			) );
-
-		// End the loop.
-		endwhile;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+		<div class="sin-more pt-4 border-top">
+			<p><?php previous_post_link( '上一篇: %link' );?></p>
+			<p><?php next_post_link( '下一篇: %link' );?></p>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

@@ -551,3 +551,20 @@ remove_action( 'wp_print_styles',    'print_emoji_styles');
 remove_filter( 'the_content_feed',    'wp_staticize_emoji');
 remove_filter( 'comment_text_rss',    'wp_staticize_emoji');
 remove_filter( 'wp_mail',        'wp_staticize_emoji_for_email');
+
+
+/**
+* @param int $id the id of the post
+* @return string html breadcrumb 
+*/
+function single_breadcrumb( $id ){
+	# get the category
+	$cat = get_the_category( $id );
+	$cat_id = $cat[0]->term_id;
+	$cat_name = $cat[0]->name;
+
+	$cat_link = get_category_link( $cat_id );
+
+	$bdc = "<p class='bc-home'><a href='". site_url() ."'>首页</a><span>/</span><a href='".$cat_link."'>$cat_name</a><span>/</span>". get_the_title($id) ."</p>";
+	return $bdc;
+}

@@ -17,15 +17,15 @@
 get_header(); ?>
 
 <!-- 关于我们 -->
-<div id="abouts" class="container d-flex justify-content-between p-0">
+<div id="abouts" class="container p-0 row">
 	<!-- 板块标题 -->
-	<div class="cont-head">
+	<div class="cont-head col-sm-3">
 		<h1 class="text-primary">ABOUT US</h1>
 		<h2 class="text-secondary">关于我们</h2>
 	</div>
 
-	<div class="cont-body d-flex justify-content-between">
-		<div class="card pb-3">
+	<div class="cont-body col-sm-9 row">
+		<div class="card pb-3 col-sm-4">
 			<img class="card-img-top" src="<?php imgUrl('img-1.jpg');?>" alt="安徽海荣通讯">
 			<div class="card-body">
 				<h1 class="card-title">公司概况</h1>
@@ -35,7 +35,7 @@ get_header(); ?>
 			<a class="btn bg-primary text-white m-3" href="#">查看更多</a>
 		</div>
 
-		<div class="card pb-3">
+		<div class="card pb-3 col-sm-4">
 			<img class="card-img-top" src="<?php imgUrl('img-2.jpg');?>" alt="安徽海荣通讯">
 			<div class="card-body">
 				<h1 class="card-title">发展历程</h1>
@@ -45,7 +45,7 @@ get_header(); ?>
 			<a class="btn bg-primary text-white m-3" href="#">查看更多</a>
 		</div>
 
-		<div class="card pb-3">
+		<div class="card pb-3 col-sm-4">
 			<img class="card-img-top" src="<?php imgUrl('img-6.jpg');?>" alt="安徽海荣通讯">
 			<div class="card-body">
 				<h1 class="card-title">企业文化</h1>
@@ -58,19 +58,19 @@ get_header(); ?>
 </div>
 
 <!-- news 新闻资讯 -->
-<div id="news" class="container p-0 d-flex justify-content-between">
+<div id="news" class="container p-0 row">
 	<!-- 板块标题 -->
-	<div class="cont-head">
+	<div class="cont-head col-sm-3">
 		<h1 class="text-primary">NEWS</h1>
 		<h2 class="text-secondary">新闻资讯</h2>
 	</div>
 
-	<div class="cont-body d-flex justify-content-between">
+	<div class="cont-body col-sm-9 row">
 		<div  class="news-album border-primary">
 			<img id="news-album" src="<?php echo get_the_post_thumbnail_url();?>" alt='<?php the_title();?>'>
 		</div>
 
-		<ul class="news-list">
+		<ul class="news-list ml-4">
 		<?php
 			$argv = array(
 				'cat' => '2',
@@ -81,11 +81,13 @@ get_header(); ?>
 			$count = 1;
 			if( have_posts() ) : while( have_posts() ) : the_post();
 		?>
-			<li class="news-item-<?php echo $count;?> p-1 <?php if( $count==1 ){
+			<li class="news-item-<?php echo $count;?> <?php if( $count==1 ){
 				echo 'news-active';
 			}?>" onmouseover="showme(<?php echo $count;?>, '<?php echo get_the_post_thumbnail_url();?>')">
-				<h3 class="text-primary"><?php the_title();?></h3>
-				<p class="text-secondary"><?php echo get_the_date( the_ID() );?></p>
+				<a href="<?php the_permalink();?>">
+					<h3 class="text-primary"><?php the_title();?></h3>				
+				</a>
+				<p class="text-secondary"><?php echo get_the_date();?></p>
 			</li>	
 		<?php
 			$count++;
@@ -112,7 +114,7 @@ get_header(); ?>
 <!-- 视频宣传板块 -->
 <div id="videos" class="container-fluid bg-primary">
 	<div class="container p-0 d-flex justify-content-between">
-		<video autoplay="autoplay" controls="controls" width="720" height="408">
+		<video controls="controls">
 			<source src="<?php imgUrl('5g.Ogg');?>" type="video/ogg">
 		</video>
 
@@ -125,14 +127,14 @@ get_header(); ?>
 </div>
 
 <!-- products -->
-<div id="products" class="container d-flex justify-content-between">
+<div id="products" class="container row">
 	<!-- 板块标题 -->
-	<div class="cont-head">
+	<div class="cont-head col-sm-3">
 		<h1 class="text-primary">PRODUCT</h1>
 		<h2 class="text-secondary">产品中心</h2>
 	</div>
 
-	<div class="cont-body">
+	<div class="cont-body col-sm-9">
 		<!-- one line -->
 		<div class="cont-item d-flex justify-content-between mb-2 border-bottom">
 			<div class="cont-item-icon">
@@ -207,16 +209,51 @@ get_header(); ?>
 	</div>
 </div>
 
-<!-- friend links -->
-<div id="partner" class="container d-flex justify-content-between">
+<!-- products mobile -->
+<div id="m-products" class="container">
 	<!-- 板块标题 -->
 	<div class="cont-head">
+		<h1 class="text-primary">PRODUCT</h1>
+		<h2 class="text-secondary">产品中心</h2>
+	</div>
+
+	<div class="cont-body">
+		<div class="cont-body-item d-flex justify-content-between mt-4">
+			<img class="d-block pr-4" src="<?php imgUrl('icon/ico1_8.png');?>" alt="安徽海荣通讯">
+			<div class="cont-item-infos">
+				<h1 class="text-primary">5G基站</h1>
+				<p class="text-secondary">5G基站基于多天线Massive MIMO（大规模输入输出）、新型编码LDPC/Polar等5G先进新技术，具备超大带宽，体验速率可达1Gbps，相当于4G的100倍，峰值速率更是可达20Gbps，相当于4G的200倍。</p>
+			</div>
+		</div>
+
+		<div class="cont-body-item d-flex justify-content-between mt-4">
+			<img class="d-block pr-4" src="<?php imgUrl('icon/ico1_9.png');?>" alt="安徽海荣通讯">
+			<div class="cont-item-infos">
+				<h1 class="text-primary">铁塔建设</h1>
+				<p class="text-secondary">可生产包括接插式单管塔、法兰式单管塔、景观塔、仿生树、美化灯杆、三管塔、角钢塔、增高架、小微站、通信拖车等多种产品。</p>
+			</div>
+		</div>
+
+		<div class="cont-body-item d-flex justify-content-between mt-4">
+			<img class="d-block pr-4" src="<?php imgUrl('icon/ico1_10.png');?>" alt="安徽海荣通讯">
+			<div class="cont-item-infos">
+				<h1 class="text-primary">多元产品</h1>
+				<p class="text-secondary">多元化经营企业为管理者创造了一个协调管理不同经营业务的机会，因此，其运行将比专业化经营企业更有效率，能获取更高的投资报酬</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- friend links -->
+<div id="partner" class="container row">
+	<!-- 板块标题 -->
+	<div class="cont-head col-sm-3">
 		<h1 class="text-primary">PARTNER</h1>
 		<h2 class="text-secondary">合作伙伴</h2>
 	</div>
 
-	<div class="cont-body">
-		<div class="d-flex justify-content-between">
+	<div class="cont-body col-sm-9">
+		<div class="row d-flex justify-content-between">
 			<img class="d-block" src="<?php imgUrl('partner_dx.png');?>" alt="中国电信">
 			<img class="d-block" src="<?php imgUrl('partner_lt.png');?>" alt="中国联通">
 			<img class="d-block" src="<?php imgUrl('partner_yd.png');?>" alt="中国移动">
@@ -224,6 +261,18 @@ get_header(); ?>
 			<img class="d-block" src="<?php imgUrl('partner_tx.png');?>" alt="中国通信服务">
 		</div>
 	</div>
+
+	<!-- <div class="m-cont-body">
+		<div class="w-100 d-flex justify-content-between">
+			<img class="d-block" src="<?php imgUrl('partner_dx.png');?>" alt="中国电信">
+			<img class="d-block" src="<?php imgUrl('partner_lt.png');?>" alt="中国联通">
+		</div>
+
+		<div class="w-100 d-flex justify-content-between">
+			<img class="d-block" src="<?php imgUrl('partner_yd.png');?>" alt="中国移动">
+			<img class="d-block" src="<?php imgUrl('partner_tt.png');?>" alt="中国铁塔">
+		</div>
+	</div> -->
 </div>
 
 <?php get_footer(); ?>
